@@ -1,0 +1,14 @@
+C:\Users\Вадим\source\repos\pb\pb\bin\Debug\net8.0\pb.exe
+C:\Users\Вадим\source\repos\pb\pb\bin\Debug\net8.0\pb.deps.json
+C:\Users\Вадим\source\repos\pb\pb\bin\Debug\net8.0\pb.runtimeconfig.json
+C:\Users\Вадим\source\repos\pb\pb\bin\Debug\net8.0\pb.dll
+C:\Users\Вадим\source\repos\pb\pb\bin\Debug\net8.0\pb.pdb
+C:\Users\Вадим\source\repos\pb\pb\obj\Debug\net8.0\pb.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Вадим\source\repos\pb\pb\obj\Debug\net8.0\pb.AssemblyInfoInputs.cache
+C:\Users\Вадим\source\repos\pb\pb\obj\Debug\net8.0\pb.AssemblyInfo.cs
+C:\Users\Вадим\source\repos\pb\pb\obj\Debug\net8.0\pb.csproj.CoreCompileInputs.cache
+C:\Users\Вадим\source\repos\pb\pb\obj\Debug\net8.0\pb.dll
+C:\Users\Вадим\source\repos\pb\pb\obj\Debug\net8.0\refint\pb.dll
+C:\Users\Вадим\source\repos\pb\pb\obj\Debug\net8.0\pb.pdb
+C:\Users\Вадим\source\repos\pb\pb\obj\Debug\net8.0\pb.genruntimeconfig.cache
+C:\Users\Вадим\source\repos\pb\pb\obj\Debug\net8.0\ref\pb.dll
