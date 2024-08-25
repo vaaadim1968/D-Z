@@ -1,0 +1,14 @@
+C:\Users\Вадим\source\repos\3x3\3x3\bin\Debug\net8.0\3x3.exe
+C:\Users\Вадим\source\repos\3x3\3x3\bin\Debug\net8.0\3x3.deps.json
+C:\Users\Вадим\source\repos\3x3\3x3\bin\Debug\net8.0\3x3.runtimeconfig.json
+C:\Users\Вадим\source\repos\3x3\3x3\bin\Debug\net8.0\3x3.dll
+C:\Users\Вадим\source\repos\3x3\3x3\bin\Debug\net8.0\3x3.pdb
+C:\Users\Вадим\source\repos\3x3\3x3\obj\Debug\net8.0\3x3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Вадим\source\repos\3x3\3x3\obj\Debug\net8.0\3x3.AssemblyInfoInputs.cache
+C:\Users\Вадим\source\repos\3x3\3x3\obj\Debug\net8.0\3x3.AssemblyInfo.cs
+C:\Users\Вадим\source\repos\3x3\3x3\obj\Debug\net8.0\3x3.csproj.CoreCompileInputs.cache
+C:\Users\Вадим\source\repos\3x3\3x3\obj\Debug\net8.0\3x3.dll
+C:\Users\Вадим\source\repos\3x3\3x3\obj\Debug\net8.0\refint\3x3.dll
+C:\Users\Вадим\source\repos\3x3\3x3\obj\Debug\net8.0\3x3.pdb
+C:\Users\Вадим\source\repos\3x3\3x3\obj\Debug\net8.0\3x3.genruntimeconfig.cache
+C:\Users\Вадим\source\repos\3x3\3x3\obj\Debug\net8.0\ref\3x3.dll
