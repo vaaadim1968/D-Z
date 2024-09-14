@@ -1,125 +1,135 @@
 ﻿using System;
 using System.Collections.Generic;
 
-class User
+class Employee
 {
-    public int Id { get; set; }
+    public int Id { get; }
     public string Name { get; set; }
-    public int Age { get; set; }
+    public string Position { get; set; }
+    public decimal Salary { get; set; }
 
-    public override string ToString()
+    public Employee(int id, string name, string position, decimal salary)
     {
-        return $"ID: {Id}, Name: {Name}, Age: {Age}";
+        Id = id;
+        Name = name;
+        Position = position;
+        Salary = salary;
     }
+
+    public override string ToString() => $"ID: {Id}, Name: {Name}, Position: {Position}, Salary: {Salary:C}";
 }
 
-class UserManager
+class EmployeeManager
 {
-    private List<User> users = new List<User>();
+    private readonly List<Employee> employees = new();
     private int nextId = 1;
 
-    public void AddUser(string name, int age)
+    public void AddEmployee(string name, string position, decimal salary)
     {
-        User user = new User
-        {
-            Id = nextId++,
-            Name = name,
-            Age = age
-        };
-        users.Add(user);
-        Console.WriteLine("Пользователь добавлен.");
+        employees.Add(new Employee(nextId++, name, position, salary));
+        Console.WriteLine("Сотрудник добавлен.");
     }
 
-    public void RemoveUser(int id)
+    public void UpdateEmployee(int id, string name, string position, decimal salary)
     {
-        User user = users.Find(u => u.Id == id);
-        if (user != null)
+        var employee = employees.Find(e => e.Id == id);
+        if (employee != null)
         {
-            users.Remove(user);
-            Console.WriteLine("Пользователь удален.");
+            employee.Name = name;
+            employee.Position = position;
+            employee.Salary = salary;
+            Console.WriteLine("Сотрудник обновлен.");
         }
         else
         {
-            Console.WriteLine("Пользователь не найден.");
+            Console.WriteLine("Сотрудник не найден.");
         }
     }
 
-    public void ListUsers()
+    public void GetEmployee(int id)
     {
-        if (users.Count == 0)
+        var employee = employees.Find(e => e.Id == id);
+        if (employee != null)
         {
-            Console.WriteLine("Нет пользователей для отображения.");
+            Console.WriteLine(employee);
+        }
+        else
+        {
+            Console.WriteLine("Сотрудник не найден.");
+        }
+    }
+
+    public void CalculateTotalSalaries()
+    {
+        decimal totalSalary = 0;
+        employees.ForEach(e => totalSalary += e.Salary);
+        Console.WriteLine($"Общая зарплата сотрудников: {totalSalary:C}");
+    }
+
+    public void ListEmployees()
+    {
+        if (employees.Count == 0)
+        {
+            Console.WriteLine("Нет сотрудников для отображения.");
             return;
         }
 
-        Console.WriteLine("Список пользователей:");
-        foreach (var user in users)
-        {
-            Console.WriteLine(user);
-        }
+        Console.WriteLine("Список сотрудников:");
+        employees.ForEach(e => Console.WriteLine(e));
     }
 }
 
 class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
-        UserManager userManager = new UserManager();
+        var employeeManager = new EmployeeManager();
         bool running = true;
 
         while (running)
         {
-            Console.WriteLine("\nМеню:");
-            Console.WriteLine("1. Добавить пользователя");
-            Console.WriteLine("2. Удалить пользователя");
-            Console.WriteLine("3. Показать всех пользователей");
-            Console.WriteLine("4. Выход");
+            Console.WriteLine("\nМеню:\n1. Добавить сотрудника\n2. Обновить информацию о сотруднике\n3. Получить информацию о сотруднике\n4. Рассчитать общую зарплату\n5. Показать всех сотрудников\n6. Выход");
             Console.Write("Выберите действие: ");
 
-            string choice = Console.ReadLine();
-            switch (choice)
+            switch (Console.ReadLine())
             {
                 case "1":
-                    try
-                    {
-                        Console.Write("Введите имя: ");
-                        string name = Console.ReadLine();
-                        Console.Write("Введите возраст: ");
-                        int age = int.Parse(Console.ReadLine());
-                        userManager.AddUser(name, age);
-                    }
-                    catch (FormatException)
-                    {
-                        Console.WriteLine("Некорректный ввод возраста.");
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine($"Произошла ошибка: {ex.Message}");
-                    }
+                    Console.Write("Введите имя: ");
+                    string name = Console.ReadLine();
+                    Console.Write("Введите должность: ");
+                    string position = Console.ReadLine();
+                    Console.Write("Введите зарплату: ");
+                    decimal salary = decimal.Parse(Console.ReadLine());
+                    employeeManager.AddEmployee(name, position, salary);
                     break;
 
                 case "2":
-                    try
-                    {
-                        Console.Write("Введите ID пользователя для удаления: ");
-                        int id = int.Parse(Console.ReadLine());
-                        userManager.RemoveUser(id);
-                    }
-                    catch (FormatException)
-                    {
-                        Console.WriteLine("Некорректный ввод ID.");
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine($"Произошла ошибка: {ex.Message}");
-                    }
+                    Console.Write("Введите ID сотрудника для обновления: ");
+                    int updateId = int.Parse(Console.ReadLine());
+                    Console.Write("Введите новое имя: ");
+                    string newName = Console.ReadLine();
+                    Console.Write("Введите новую должность: ");
+                    string newPosition = Console.ReadLine();
+                    Console.Write("Введите новую зарплату: ");
+                    decimal newSalary = decimal.Parse(Console.ReadLine());
+                    employeeManager.UpdateEmployee(updateId, newName, newPosition, newSalary);
                     break;
 
                 case "3":
-                    userManager.ListUsers();
+                    Console.Write("Введите ID сотрудника для получения информации: ");
+                    int getId = int.Parse(Console.ReadLine());
+                    employeeManager.GetEmployee(getId);
                     break;
 
                 case "4":
+                    employeeManager.CalculateTotalSalaries();
+                    break;
+
+                case "5":
+                    employeeManager.ListEmployees();
+                    break;
+
+                case "6":
                     running = false;
                     break;
 
