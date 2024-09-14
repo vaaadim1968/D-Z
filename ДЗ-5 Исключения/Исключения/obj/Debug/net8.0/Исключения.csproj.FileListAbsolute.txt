@@ -1,0 +1,14 @@
+C:\Users\Вадим\source\repos\Исключения\Исключения\bin\Debug\net8.0\Исключения.exe
+C:\Users\Вадим\source\repos\Исключения\Исключения\bin\Debug\net8.0\Исключения.deps.json
+C:\Users\Вадим\source\repos\Исключения\Исключения\bin\Debug\net8.0\Исключения.runtimeconfig.json
+C:\Users\Вадим\source\repos\Исключения\Исключения\bin\Debug\net8.0\Исключения.dll
+C:\Users\Вадим\source\repos\Исключения\Исключения\bin\Debug\net8.0\Исключения.pdb
+C:\Users\Вадим\source\repos\Исключения\Исключения\obj\Debug\net8.0\Исключения.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Вадим\source\repos\Исключения\Исключения\obj\Debug\net8.0\Исключения.AssemblyInfoInputs.cache
+C:\Users\Вадим\source\repos\Исключения\Исключения\obj\Debug\net8.0\Исключения.AssemblyInfo.cs
+C:\Users\Вадим\source\repos\Исключения\Исключения\obj\Debug\net8.0\Исключения.csproj.CoreCompileInputs.cache
+C:\Users\Вадим\source\repos\Исключения\Исключения\obj\Debug\net8.0\Исключения.dll
+C:\Users\Вадим\source\repos\Исключения\Исключения\obj\Debug\net8.0\refint\Исключения.dll
+C:\Users\Вадим\source\repos\Исключения\Исключения\obj\Debug\net8.0\Исключения.pdb
+C:\Users\Вадим\source\repos\Исключения\Исключения\obj\Debug\net8.0\Исключения.genruntimeconfig.cache
+C:\Users\Вадим\source\repos\Исключения\Исключения\obj\Debug\net8.0\ref\Исключения.dll
